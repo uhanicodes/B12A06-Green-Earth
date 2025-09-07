@@ -10,6 +10,27 @@ fetch(url)
             tree.innerText = element.category_name;
 
             category.appendChild(tree);
-            console.log(element.category_name);
+
+            tree.addEventListener('click', (e) => {
+                console.log("The category is clicked!");
+                let url2 = `https://openapi.programming-hero.com/api/category/${element.id}`;
+
+                fetch(url2)
+                    .then(res => res.json())
+                    .then(data => data.plants.forEach(element => {
+                        console.log(element);
+                }))
+
+            })
+            // console.log(element.category_name);
         }
     });
+
+
+let treeDetailsUrl = "https://openapi.programming-hero.com/api/plant/1";
+
+fetch(treeDetailsUrl)
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+
