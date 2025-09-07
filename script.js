@@ -17,9 +17,23 @@ fetch(url)
 
                 fetch(url2)
                     .then(res => res.json())
-                    .then(data => data.plants.forEach(element => {
-                        console.log(element);
-                }))
+                    .then(data => {
+                        data.plants.forEach(element => {
+                            console.log(element);
+                        
+                        })
+
+                        console.log("data:", data);
+
+                        for (const plant of data.plants) {
+                            let trees = document.getElementById("display-trees");
+                            let createDiv = document.createElement("div");
+                            createDiv.innerHTML = `
+                                <h1>Test</h1>
+                            `
+                            trees.appendChild(createDiv);
+                        }
+                    })
 
             })
             // console.log(element.category_name);
