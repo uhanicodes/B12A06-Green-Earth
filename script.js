@@ -26,6 +26,7 @@ fetch(url)
                         console.log("data:", data);
 
                         let trees = document.getElementById("display-trees");
+                        trees.innerHTML = "";
                         
                         for (const plant of data.plants) {
                             let createDiv = document.createElement("div");
