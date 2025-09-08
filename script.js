@@ -31,7 +31,7 @@ fetch(url)
                         for (const plant of data.plants) {
                             let createDiv = document.createElement("div");
                             createDiv.innerHTML = `
-                                <h1>${plant.name}</h1>
+                                <h1 id="${plant.id}">${plant.name}</h1>
                                 <p>${plant.description}</p>
                                 <div>
                                     <span>${plant.category}</span>
@@ -40,6 +40,11 @@ fetch(url)
                                 <button>Add to Cart</button>
                             `
                             trees.appendChild(createDiv);
+
+                            let plantModal = document.getElementById(`${plant.id}`);
+                            plantModal.addEventListener('click', (e) => {
+                                console.log("The plant is clicked!");
+                            })
                         }
                     })
 
