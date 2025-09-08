@@ -25,11 +25,18 @@ fetch(url)
 
                         console.log("data:", data);
 
+                        let trees = document.getElementById("display-trees");
+                        
                         for (const plant of data.plants) {
-                            let trees = document.getElementById("display-trees");
                             let createDiv = document.createElement("div");
                             createDiv.innerHTML = `
-                                <h1>Test</h1>
+                                <h1>${plant.name}</h1>
+                                <p>${plant.description}</p>
+                                <div>
+                                    <span>${plant.category}</span>
+                                    <span>${plant.price}</span>
+                                </div>
+                                <button>Add to Cart</button>
                             `
                             trees.appendChild(createDiv);
                         }
