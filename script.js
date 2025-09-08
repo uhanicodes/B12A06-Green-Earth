@@ -44,6 +44,11 @@ fetch(url)
                             let plantModal = document.getElementById(`${plant.id}`);
                             plantModal.addEventListener('click', (e) => {
                                 console.log("The plant is clicked!");
+                                let treeDetailsUrl = `https://openapi.programming-hero.com/api/plant/${plant.id}`;
+
+                                fetch(treeDetailsUrl)
+                                    .then(res => res.json())
+                                    .then(data => console.log(data));
                             })
                         }
                     })
@@ -52,12 +57,3 @@ fetch(url)
             // console.log(element.category_name);
         }
     });
-
-
-let treeDetailsUrl = "https://openapi.programming-hero.com/api/plant/1";
-
-fetch(treeDetailsUrl)
-    .then(res => res.json())
-    .then(data => console.log(data))
-
-
