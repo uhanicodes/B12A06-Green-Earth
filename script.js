@@ -57,8 +57,13 @@ fetch(url)
 
                                         modalElements.innerHTML = `
                                             <div class="modal-box">
-                                                <h3 class="text-lg font-bold">Hello!</h3>
-                                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                                <div class="h-50 w-50">
+                                                    <img src="${data.plants.image}"/>
+                                                </div>
+                                                <h3 class="text-lg font-bold">${data.plants.name}</h3>
+                                                <p class="py-4">${data.plants.category}</p>
+                                                <p>${data.plants.description}</p>
+                                                <p>${data.plants.price}</p>
                                                 <div class="modal-action">
                                                 <form method="dialog">
                                                     <!-- if there is a button in form, it will close the modal -->
