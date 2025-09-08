@@ -45,13 +45,33 @@ fetch(url)
                             plantModal.addEventListener('click', (e) => {
                                 console.log("The plant is clicked!");
                                 let treeDetailsUrl = `https://openapi.programming-hero.com/api/plant/${plant.id}`;
-                                let modalDialogBox = document.getElementById("my_modal_1");
-                                modalDialogBox.showModal();
-
-
+                                
                                 fetch(treeDetailsUrl)
                                     .then(res => res.json())
-                                    .then(data => console.log("Modal data", data));
+                                    .then(data => {
+                                        console.log("Modal data", data)
+                                          
+                                        let modalBox = document.getElementById("modal");
+                                        modalBox.innerHTML = "";
+                                        let modalElements = document.createElement('div');
+
+                                        modalElements.innerHTML = `
+                                            <div class="modal-box">
+                                                <h3 class="text-lg font-bold">Hello!</h3>
+                                                <p class="py-4">Press ESC key or click the button below to close</p>
+                                                <div class="modal-action">
+                                                <form method="dialog">
+                                                    <!-- if there is a button in form, it will close the modal -->
+                                                    <button class="btn">Close</button>
+                                                </form>
+                                                </div>
+                                            </div>
+                                        `
+
+                                        modalBox.appendChild(modalElements);
+                                        
+                                        modalBox.showModal();
+                                    });
                             })
 
                             let addToCart = document.getElementById(`btn-${plant.id}`);
