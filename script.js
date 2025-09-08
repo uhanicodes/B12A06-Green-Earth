@@ -45,10 +45,13 @@ fetch(url)
                             plantModal.addEventListener('click', (e) => {
                                 console.log("The plant is clicked!");
                                 let treeDetailsUrl = `https://openapi.programming-hero.com/api/plant/${plant.id}`;
+                                let modalDialogBox = document.getElementById("my_modal_1");
+                                modalDialogBox.showModal();
+
 
                                 fetch(treeDetailsUrl)
                                     .then(res => res.json())
-                                    .then(data => console.log(data));
+                                    .then(data => console.log("Modal data", data));
                             })
 
                             let addToCart = document.getElementById(`btn-${plant.id}`);
