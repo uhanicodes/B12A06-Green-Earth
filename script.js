@@ -37,7 +37,7 @@ fetch(url)
                                     <span>${plant.category}</span>
                                     <span>${plant.price}</span>
                                 </div>
-                                <button>Add to Cart</button>
+                                <button id="btn-${plant.id}">Add to Cart</button>
                             `
                             trees.appendChild(createDiv);
 
@@ -49,6 +49,21 @@ fetch(url)
                                 fetch(treeDetailsUrl)
                                     .then(res => res.json())
                                     .then(data => console.log(data));
+                            })
+
+                            let addToCart = document.getElementById(`btn-${plant.id}`);
+
+                            addToCart.addEventListener('click', (e) => {
+                                console.log("Cart Clicked!");
+                                let selectCart = document.getElementById("cart");
+                                let cartItem = document.createElement('div');
+
+                                cartItem.innerHTML = `
+                                    <h4>${plant.name}</h4>
+                                    <p>${plant.price}</p>
+                                `
+
+                                selectCart.appendChild(cartItem);
                             })
                         }
                     })
