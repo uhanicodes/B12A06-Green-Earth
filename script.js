@@ -32,7 +32,7 @@ fetch(url)
                             let createDiv = document.createElement("div");
                             createDiv.innerHTML = `
                                 <h1 id="${plant.id}">${plant.name}</h1>
-                                <div class="h-[30%] w-[30%]">
+                                <div class="">
                                     <img src="${plant.image}"/>
                                 </div>
                                 <p>${plant.description}</p>
