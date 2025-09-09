@@ -1,169 +1,54 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
-
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
-
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
-
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
-
----
-# Green Earth
-
-
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
-
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
-
-## Alternative Private Repository: https://classroom.github.com/a/JMuIYqgK 
-
-
----
-🌴 API Endpoints
----
-1. Get 🌴All Plants
-```bash
-https://openapi.programming-hero.com/api/plants
-```
-
-2. Get 🌴All categories <br/>
-```bash
-https://openapi.programming-hero.com/api/categories
-```
-
-
-3. Get 🌴plants by categories <br/>
-```bash
-https://openapi.programming-hero.com/api/category/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/category/1
-```
-
-4. Get 🌴Plants Detail <br/>
-
-```bash
-https://openapi.programming-hero.com/api/plant/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/plant/1
-```
----
-
-
-
-
-## ✅ Main Requirements 
-
-#### 1) Navbar
-
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
-
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
-
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
-
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
-
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
-
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
-
----
-#### 7) Create a README file to answer the following question-
-
-
-#### 1) What is the difference between var, let, and const?
-
-#### 2) What is the difference between map(), forEach(), and filter()? 
-
-#### 3) What are arrow functions in ES6?
-
-#### 4) How does destructuring assignment work in ES6?
-
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
-
-## ⚙️ Functionalities 
-
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
-
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
-
-Display in a 3-column card layout.
-
-3) Card Contents 
- Each card includes:
-
-        - Image
-
-        -  Name
-
-        - Short description
-
-        - Category
-
-        - Price
-
-        - Add to Cart button
-
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
-
-
-##  🧪 Challenges 
-
-
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
-
-    2) Total Calculation 
-    Calculate total price of trees in cart.
-
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
-
-    4) Loading Spinner
-    Show spinner while data is loading.
-
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
+# Q-1:  What is the difference between var, let, and const?
+* Answer: 
+        var: * var is function scoped.
+             * var can be hoisted.
+             * var can be redeclared in the same scope.
+             * var can be reassigned.
         
-        HTML
+        let: * let is blocked scoped.
+             * let cannot be hoisted.
+             * let cannot be redeclared in the same scope.
+             * let can be reassigned.
 
-        CSS (Vanilla / Tailwind / DaisyUI)
+        const: * const is blocked scoped.
+               * const cannot be hoisted.
+               * const cannot be redeclared in the same scope.
+               * const cannot be reassigned. 
 
-        JavaScript (Vanilla only, no frameworks)
+# Q-2: What is the difference between map(), forEach(), and filter()?
+* Answer: map(), forEach() and filter() are three methods of array.
+         
+         map(): * map() creates a new array of same length from an array.
+                * map() accepts a callback function, which converts each element of the array.
 
-📌 Rules
-✅ At least 5 meaningful commits
+        forEach(): *  forEach() perform an operation on each elements of an array.
+                   * forEach() accepts a callback function, which contains the operation to be    performed on each element of the array.
+                   
 
-❌ No dummy text or Lorem Ipsum — must use relevant content
+        filter(): * filter accepts a callback function, which filter the elements of an array
+                    according to the given condition in the callback function and return a new array with the filtered elements of the array.    
+                  *
+                  *     
 
+# Q-3: What are arrow functions in ES6?
+* Answer: 
+               * The arrow functions in ES6 is a convention to declare a function.
+               * An arrow function is declared with an arrow notation instead of 'function' keyword.
+               * The arrow function has to be assigned in a variable and the variable will be the function name.
+               * when an arrow function is passed as an callback function, it is no need to assigned to a variable.
 
+# Q-4: How does destructuring assignment work in ES6?
+* Answer: There are two types of destructuring: array and object.
 
+          Array destructuring: * An element of array has to be accessed with its index.
+                               * Destructuring array provides the facility to assign an element to a variable and the element can be accessed with the variable.
 
+          Object destructuring: * A property of an object is accessed using 'dot(.)' notation
+                                  or 'dictionary([])'.
+                                * Destructuring object with specific property or properties provide facility to use the property as a variable.        
+# Q-5: Explain template literals in ES6. How are they different from string concatenation?
+* Answer: 
+           * The template literals in ES6 provide the facility to use JavaScript expression within a string.
+           * In template literals the string is written inside backticks (``).
+           * The JS expressions have to be written inside '${exp}'.
 
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
-
----
